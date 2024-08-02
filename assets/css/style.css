@@ -1,0 +1,304 @@
+/* Custom styles for the plugin */
+#nab-booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#nab-booking-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#nab-booking-form input,
+#nab-booking-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#nab-booking-form button {
+    padding: 10px 15px;
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#nab-user-dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#nab-user-dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#nab-user-dashboard table, 
+#nab-user-dashboard th, 
+#nab-user-dashboard td {
+    border: 1px solid #ddd;
+}
+
+#nab-user-dashboard th, 
+#nab-user-dashboard td {
+    padding: 10px;
+    text-align: left;
+}
+
+
+/* Form - Shortcode */
+#booking-form {
+    margin: 20px;
+}
+
+
+.selection {
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+.selection-form h3, .practitioner-form h3, .location-form h3{
+    width: 100%;
+}
+
+label.nab-button input {
+    display: none;
+}
+
+label.nab-button {
+    padding: 10px;
+    color: #fff;
+    border-radius: 14px;
+    background: #009fcc;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 10px #ececec;
+    cursor: pointer;
+    text-align: center;
+}
+
+.selection-form, .practitioner-form, .location-form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.practitioners-list, .locations-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Loader */
+/* Animation */
+-webkit-@keyframes spin {
+    -webkit-from {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    -webkit-to {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+.nb-spinner {
+    width: 75px;
+    height: 75px;
+    margin: 0;
+    background: transparent;
+    border-top: 4px solid #009fcc;
+    border-right: 4px solid transparent;
+    border-radius: 50%;
+    -webkit-animation: 1s spin linear infinite;
+    animation: 1s spin linear infinite;
+}
+.loader >div {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    z-index: 99999;
+}
+
+.loader {
+    position: fixed;
+    z-index: 9999999;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.service-list, .class-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+#month-dropdown, #year-dropdown {
+    margin-right: 10px;
+}
+
+.no-availability {
+    background-color: #f8d7da; /* Light red background for no availability */
+    color: #721c24; /* Dark red text color */
+    border: 1px solid #f5c6cb; /* Light red border */
+    cursor: not-allowed; /* Indicate that this day is not clickable */
+}
+
+.available-slot {
+    padding: 5px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    margin: 2px 0;
+    border-radius: 4px;
+    width: 65px;
+}
+
+.available-slot:hover {
+    background-color: #c3e6cb;
+    cursor: pointer;
+}
+
+
+.calendar-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.day {
+    width: calc(100% / 7);
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin: 0;
+    text-align: center;
+}
+
+.day-header {
+    font-weight: bold;
+    box-sizing: border-box;
+    width: calc(100% / 7);
+    padding: 10px;
+    background: #009fcc;
+    color: #fff;
+    border: 1px solid #d2d3d3;
+}
+
+.day:not(.header) {
+    cursor: pointer;
+}
+
+.day:hover {
+    background-color: #f0f0f0;
+}
+
+div#calendar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+
+.available-list {
+    display: flex;
+    overflow: scroll;
+    width: 450px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: space-around;
+    gap: 12px;
+}
+
+#booking-slots::-webkit-scrollbar {
+    width: 1em;
+}
+
+#booking-slots::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#booking-slots::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+.day.no-availability {
+    pointer-events: none;
+}
+
+.filters {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.booking-patient-details {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.booking-patient-details label {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}

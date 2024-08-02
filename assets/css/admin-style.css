@@ -1,0 +1,107 @@
+/* Add CSS for responsive table */
+.table-responsive {
+    max-width: 100% !important;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* for smooth scrolling */
+}
+
+.table-responsive table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-responsive th, .table-responsive td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table-responsive th {
+    background-color: #f2f2f2;
+}
+
+div#pagination-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+div#pagination-container ul {
+    display: flex;
+    gap: 20px;    
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+div#pagination-container ul a {
+    color: #000 !important;
+    cursor: pointer;
+    padding: 10px;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid rgb(0 0 0 / 54%);
+}
+
+div#pagination-container ul li.disabled a {
+    color: #000 !important;
+    padding: 10px;
+    background: #fff2;
+    border: 1px solid rgb(0 0 0 / 54%);
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .table-responsive thead {
+        display: none; /* Hide table headers on small screens */
+    }
+    
+    .table-responsive tr {
+        display: block;
+        margin-bottom: 15px;
+    }
+    
+    .table-responsive td {
+        display: block;
+        text-align: right;
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    .table-responsive td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* Status */
+.apikey-status {
+    display: block;
+    padding: 10px;
+    width: fit-content;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.status-deactive{
+    background: #ffd0d0;
+    border: 1px solid #f00;
+    color: #f00;
+}
+
+.status-active {
+    background: #c1ffcc;
+    border: 1px solid #00a11b;
+    color: #00a11b;
+}
+
